@@ -35,7 +35,7 @@ require('neorg').setup {
 It is located inside your user's Library. I recommend you try out this command:
 
 ```bash
-find /Users/<your_name>/Library -name main.sqlite 2>/dev/null | grep -v Backups
+find /Users/your_name/Library -name main.sqlite 2>/dev/null | grep -v Backups
 ```
 
 This command will find all main.sqlite files inside your library, and remove all results with `Backups` inside, as we want the original database
