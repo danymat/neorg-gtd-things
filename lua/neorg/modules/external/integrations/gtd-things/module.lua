@@ -117,7 +117,7 @@ module.private = {
 				end)(),
 				["time.start"] = neorg.lib.when(vim.NIL == x.start_date, nil, { x.start_date }),
 				["time.due"] = neorg.lib.when(vim.NIL == x.deadline, nil, { x.deadline }),
-                project_uuid = x.project
+				project_uuid = x.project,
 			}
 		end, data)
 	end,
