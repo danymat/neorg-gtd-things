@@ -10,7 +10,7 @@ This is an extension of Neorg module `neorg.gtd.base` that uses your [Things3](h
 <summary>Today's tasks</summary>
 
   <img width="419" alt="Capture d’écran 2022-01-06 à 10 40 35" src="https://user-images.githubusercontent.com/5306901/148362520-d4b1885d-e799-4b09-98d1-5901290e0266.png">
-
+<br>
   <img width="500" alt="Capture d’écran 2022-01-06 à 10 40 20" src="https://user-images.githubusercontent.com/5306901/148362496-bac54a2e-6249-4821-98d7-b4df0274752f.png">
 </details>
 
@@ -18,6 +18,7 @@ This is an extension of Neorg module `neorg.gtd.base` that uses your [Things3](h
 <summary>Projects</summary>
 
   <img width="170" alt="Capture d’écran 2022-01-06 à 10 42 15" src="https://user-images.githubusercontent.com/5306901/148362737-ca1eff72-4178-448f-9c64-3ff23ad47f46.png">
+  <br>
   <img width="350" alt="image" src="https://user-images.githubusercontent.com/5306901/148362858-1f54a055-2cef-494f-8507-8efc18228cb9.png">
 </details>
 
