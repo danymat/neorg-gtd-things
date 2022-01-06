@@ -14,14 +14,14 @@ This is an extension of Neorg module `neorg.gtd.base` that uses your Things3 app
   <img width="500" alt="Capture d’écran 2022-01-06 à 10 40 20" src="https://user-images.githubusercontent.com/5306901/148362496-bac54a2e-6249-4821-98d7-b4df0274752f.png">
 </details>
 
-And much more ...
-
 <details>
 <summary>Projects</summary>
 
   <img width="170" alt="Capture d’écran 2022-01-06 à 10 42 15" src="https://user-images.githubusercontent.com/5306901/148362737-ca1eff72-4178-448f-9c64-3ff23ad47f46.png">
   <img width="350" alt="image" src="https://user-images.githubusercontent.com/5306901/148362858-1f54a055-2cef-494f-8507-8efc18228cb9.png">
 </details>
+
+And much more ...
 
 ## Installation
 
