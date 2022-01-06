@@ -1,4 +1,4 @@
-# Neorg GTD <--> Things3
+# Neorg GTD with Things3
 
 ## Summary
 
