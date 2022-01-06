@@ -104,6 +104,10 @@ module.private = {
 						table.remove(res, i)
 					end
 
+					if #res == 0 then
+						return
+					end
+
 					return res
 				end)(),
 				["waiting.for"] = (function()
