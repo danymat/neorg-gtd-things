@@ -22,12 +22,17 @@ module.public = {
 	version = "0.0.9",
 
 	get_tasks = function()
-		local tasks = module.private.execute_command(
-			"things-cli --json --database '" .. module.config.public.things_db_path .. "' todos"
-		)
+		local tasks = module.private.execute_command("todos")
 		tasks = vim.fn.json_decode(tasks)
 		tasks = module.private.reformat_data(tasks)
 		return tasks
+	end,
+
+	get_projects = function()
+		local projects = module.private.execute_command("projects")
+		projects = vim.fn.json_decode(projects)
+		projects = module.private.reformat_data(projects)
+		return projects
 	end,
 }
 
@@ -45,7 +50,7 @@ module.load = function()
 	end
 
 	module.required["core.gtd.base"].callbacks["get_data"] = function()
-		return module.public.get_tasks()
+		return module.public.get_tasks(), module.public.get_projects()
 	end
 
 	module.required["core.gtd.base"].callbacks["gtd.edit"] = function()
@@ -58,6 +63,7 @@ end
 
 module.private = {
 	execute_command = function(command)
+		command = "things-cli --json --database '" .. module.config.public.things_db_path .. "' " .. command
 		local handle = io.popen(command)
 		local res = handle:read("*a")
 		handle:close()
@@ -77,8 +83,13 @@ module.private = {
 				area_of_focus = x.area_title,
 				contexts = (function()
 					local res = vim.deepcopy(x.tags) or {}
+
 					if x.start == "Someday" then
 						table.insert(res, "someday")
+					end
+
+					if x.start_date ~= vim.NIL then
+						table.insert(res, "today")
 					end
 
 					local i = neorg.lib.find(res, module.config.public.waiting_for_tag)
@@ -104,6 +115,8 @@ module.private = {
 						return res
 					end
 				end)(),
+				["time.start"] = neorg.lib.when(vim.NIL == x.start_date, nil, { x.start_date }),
+				["time.due"] = neorg.lib.when(vim.NIL == x.deadline, nil, { x.deadline }),
 			}
 		end, data)
 	end,
