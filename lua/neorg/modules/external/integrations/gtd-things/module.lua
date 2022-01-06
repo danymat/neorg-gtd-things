@@ -8,6 +8,7 @@ module.setup = function()
 		success = true,
 		wants = {
 			"core.gtd.base",
+			"core.gtd.ui",
 		},
 	}
 end
@@ -63,6 +64,10 @@ module.load = function()
 	end
 	module.required["core.gtd.base"].callbacks["gtd.capture"] = function()
 		log.warn("Disabled")
+	end
+
+	module.required["core.gtd.ui"].callbacks["goto_task_function"] = function(data)
+		vim.cmd('silent !open "things:///show?id=' .. vim.fn.fnameescape(data.uuid) .. '"')
 	end
 end
 
