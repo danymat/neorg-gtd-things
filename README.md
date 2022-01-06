@@ -2,7 +2,7 @@
 
 ## Summary
 
-This is an extension of Neorg module `neorg.gtd.base` that uses your [Things3](https://culturedcode.com/things/) application to display your tasks in neovim !
+This is an extension of Neorg module [`neorg.gtd.base`](https://github.com/nvim-neorg/neorg/wiki/Getting-Things-Done) that uses your [Things3](https://culturedcode.com/things/) application to display your tasks in neovim !
 
 ## Showcase
 
@@ -57,4 +57,3 @@ find /Users/your_name/Library -name main.sqlite 2>/dev/null | grep -v Backups
 ```
 
 This command will find all main.sqlite files inside your library, and remove all results with `Backups` inside, as we want the original database
-
