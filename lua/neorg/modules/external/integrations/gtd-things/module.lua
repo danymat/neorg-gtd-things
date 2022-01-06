@@ -6,7 +6,7 @@ local module = neorg.modules.create("external.integrations.gtd-things")
 module.setup = function()
 	return {
 		success = true,
-		requires = {
+		wants = {
 			"core.gtd.base",
 		},
 	}
