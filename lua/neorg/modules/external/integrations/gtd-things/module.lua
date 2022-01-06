@@ -24,6 +24,11 @@ module.public = {
 	get_tasks = function()
 		local tasks = module.private.execute_command("todos")
 		tasks = vim.fn.json_decode(tasks)
+
+		local completed = module.private.execute_command("completed")
+		completed = vim.fn.json_decode(completed)
+
+		tasks = vim.list_extend(tasks, completed)
 		tasks = module.private.reformat_data(tasks)
 		return tasks
 	end,
@@ -79,6 +84,7 @@ module.private = {
 				state = neorg.lib.match({
 					x.status,
 					incomplete = "undone",
+					completed = "done",
 				}),
 				area_of_focus = x.area_title,
 				contexts = (function()
