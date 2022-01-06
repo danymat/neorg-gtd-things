@@ -46,6 +46,16 @@ require('neorg').setup {
 }
 ```
 
+## Roadmap
+
+- [ ] Fully integrate with `Neorg gtd views`
+    - [x] Display tasks and projects
+    - [x] `<Tab>` toggle functionnality 
+    - [ ] Press `<CR>` to open the task in Things3
+    - [ ] Press `e` to edit the task
+- [ ] Fully integrate with `Neorg gtd edit`
+- [ ] Fully integrate with `Neorg gtd capture`
+
 ## FAQ
 
 - How can i find my `things_db_path` ?
