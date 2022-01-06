@@ -2,7 +2,7 @@
 
 ## Summary
 
-This is an extension of Neorg module `neorg.gtd.base` that uses your Things3 application to display your tasks in neovim !
+This is an extension of Neorg module `neorg.gtd.base` that uses your [Things3](https://culturedcode.com/things/) application to display your tasks in neovim !
 
 ## Showcase
 
