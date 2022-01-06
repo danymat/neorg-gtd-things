@@ -59,12 +59,9 @@ module.load = function()
 		return module.public.get_tasks(), module.public.get_projects()
 	end
 
-	module.required["core.gtd.base"].callbacks["gtd.edit"] = function()
-		log.warn("Disabled")
-	end
-	module.required["core.gtd.base"].callbacks["gtd.capture"] = function()
-		log.warn("Disabled")
-	end
+	module.required["core.gtd.base"].callbacks["gtd.edit"] = neorg.lib.wrap(log.warn, "Disabled")
+	module.required["core.gtd.base"].callbacks["gtd.capture"] = neorg.lib.wrap(log.warn, "Disabled")
+	module.required["core.gtd.ui"].callbacks["edit_task"] = neorg.lib.wrap(log.warn, "Disabled")
 
 	module.required["core.gtd.ui"].callbacks["goto_task_function"] = function(data)
 		vim.cmd('silent !open "things:///show?id=' .. vim.fn.fnameescape(data.uuid) .. '"')

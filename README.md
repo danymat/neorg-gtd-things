@@ -48,12 +48,12 @@ require('neorg').setup {
 
 ## Roadmap
 
-- [ ] Fully integrate with `Neorg gtd views`
-    - [x] Display tasks and projects
-    - [x] `<Tab>` toggle functionnality 
-    - [ ] Press `<CR>` to open the task in Things3
-    - [ ] Press `e` to edit the task
-- [ ] Fully integrate with `Neorg gtd edit`
+- [x] Fully integrate with `Neorg gtd views`
+  - [x] Display tasks and projects
+  - [x] `<Tab>` toggle functionnality
+  - [x] Press `<CR>` to open the task in Things3
+  - [x] Press `e` to edit the task (currently disabled)
+- [x] Fully integrate with `Neorg gtd edit` (currently disabled)
 - [ ] Fully integrate with `Neorg gtd capture`
 
 ## FAQ
