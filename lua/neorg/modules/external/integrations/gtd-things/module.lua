@@ -135,6 +135,7 @@ module.private = {
 					["to-do"] = "task",
 					["project"] = "project",
 				}),
+				inbox = x.start == "Inbox",
 			}
 		end, data)
 	end,
